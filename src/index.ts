@@ -1,9 +1,8 @@
-const example_input = {
-  "datapoint_1": [1.0, 2.3, 1.2, 3.4, 2.0, 2.0, 3.1, 2.3],
-  "datapoint_2": [true, true, true, false, true, false],
-  "datapoint_3": ["active", "inactive", "active", "active", "inactive", "inactive"]
-}
-
+/**
+ * Removes consecutive duplicates from each array in the input.
+ * @param payload The input containing data arrays.
+ * @returns The result with consecutive duplicates removed from each array.
+ */
 const removeConsecutiveDuplicates = (payload: Record<string, any[]>): Record<string, any[]> => {
   const result: Record<string, any[]> = {};
 
@@ -16,7 +15,5 @@ const removeConsecutiveDuplicates = (payload: Record<string, any[]>): Record<str
   return result;
 }
 
-const rCD = removeConsecutiveDuplicates(example_input);
 
-console.log(rCD);
-
+export { removeConsecutiveDuplicates }
